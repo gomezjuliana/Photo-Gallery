@@ -7,9 +7,10 @@ var catCollection = ['http://bit.ly/2o3ftDx',
 					 'http://bit.ly/2nrTyTC']
 
 //This should make the photo change with every click
+	var count = 0;
 function goForward(){
-	for (var i = 0; i < catCollection.length; i++){
-	var kitty = '<img src=' + catCollection[i] + '>'
-    }
-    return document.getElementById("display").innerHTML = kitty;
+    document.getElementById("display").src = catCollection[count];
+	count = (count >= catCollection.length-1) ? 0 : count + 1;
 }
+
+document.addEventListener('DOMContentLoaded', goForward);
