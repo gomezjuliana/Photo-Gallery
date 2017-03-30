@@ -1,0 +1,29 @@
+body {
+	background-color: #bdbaba;
+	color: #b22222;
+}
+
+.img-responsive {
+	display: initial;
+}
+
+.btn {
+	background-color: #e6e050;
+	border: 3px solid;
+	border-bottom-color: #bbb761;
+	border-right-color: #bbb761;
+	border-left-color: #dad233;
+	border-top-color: #dad233;
+	font-weight: 600;
+	margin: 5%;
+}
+
+.btn:hover {
+	background-color: #b22222;
+	color: #e6e050;
+	border: #b22222;
+}
+
+.btn:focus{
+	outline: none;
+}
