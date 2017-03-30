@@ -1,4 +1,3 @@
-// These are my cat photos
 var catCollection = ['http://bit.ly/2o3ftDx',
 					 'http://bit.ly/2nfZKxg',
 					 'http://bit.ly/2nJfKLj',
@@ -6,24 +5,16 @@ var catCollection = ['http://bit.ly/2o3ftDx',
 					 'http://bit.ly/2nJcy2r',
 					 'http://bit.ly/2nrTyTC']
 
-//This makes the photo change with every click
-	var count = 0;
+var count = -1;
 function goForward(){
-    document.getElementById("display").src = catCollection[count];
-	count = (count >= catCollection.length-1) ? 0 : count + 1;
-	console.log(count);
+	count = count >= catCollection.length-1 ? 0 : count +1;
+	document.getElementById('display').src = catCollection[count];
+
 }
 
 function goBackward(){
-	if (count = -1){
-	   count = 5;
-	   document.getElementById("display").src = catCollection[count];
-	   console.log(count, catCollection[count]);
-	} else if (count <= catCollection.length){
-		count = count -1;
-		document.getElementById("display").src = catCollection[count];
-		console.log(count, catCollection[count]);
-	}	
+	count = count <= 0 ? catCollection.length-1 : count -1;
+	document.getElementById('display').src = catCollection[count];
 }
 
 document.addEventListener('DOMContentLoaded', goForward);
