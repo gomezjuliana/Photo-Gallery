@@ -14,10 +14,15 @@ function goForward(){
 
 }
 
+
+
 function goBackward(){
+	display.classList.add('meow');
 	count = count <= 0 ? catCollection.length-1 : count -1;
 	document.getElementById('display').src = catCollection[count];
 }
+
+display.classList.remove('meow');
 
 // This loads the first photo once the page is loaded
 document.addEventListener('DOMContentLoaded', goForward);

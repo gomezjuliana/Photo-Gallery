@@ -27,3 +27,24 @@ body {
 .btn:focus{
 	outline: none;
 }
+
+.display {
+	transition: all 5s;
+}
+
+.meow {
+	animation-duration: 3s;
+	animation-name: slidein;
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 50%;
+		width: 100%;
+	}
+}
