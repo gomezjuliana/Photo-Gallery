@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Photo Gallery</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,7 +16,11 @@
 
   <div class="text-center">
 	<button id="back" class="btn" onclick="goBackward()">Back</button>
-	<img id ="display" class="img-responsive" src="">
+  <div class="gallery-container">
+    <img class="gallery-img gallery-prev" src="">
+    <img class="gallery-img gallery-curr" src="">
+	  <img class="gallery-img gallery-next" src="">
+  </div>
 	<button id="next" class="btn" onclick="goForward()">Next</button>
   </div>
 

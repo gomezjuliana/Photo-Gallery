@@ -1,10 +1,59 @@
 body {
 	background-color: #bdbaba;
 	color: #b22222;
+	margin: 0;
 }
 
-.img-responsive {
-	display: initial;
+.text-center {
+  text-align: center;
+}
+
+.gallery-container {
+  width: 300px;
+  height: 200px;
+  overflow-x: hidden;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.gallery-img {
+	height: 200px;
+    width: 300px;
+	position: absolute;
+    top: 0;
+}
+
+.gallery-prev {
+    left: -100%;
+}
+
+.gallery-prev-curr {
+    left: 0;
+    transition: left 1s;
+}
+
+.gallery-next {
+    left: 100%;
+}
+
+.gallery-next-curr {
+    left: 0;
+    transition: left 1s;
+}
+
+.gallery-curr {
+    left: 0;
+}
+
+.gallery-curr-prev {
+    left: -100%;
+    transition: left 1s;
+}
+
+.gallery-curr-next {
+    left: 100%;
+    transition: left 1s;
 }
 
 .btn {
@@ -26,38 +75,4 @@ body {
 
 .btn:focus{
 	outline: none;
-}
-
-.display {
-	transition: all 5s;
-}
-
-.meow {
-	animation-duration: 1s;
-	animation-name: slidetoleft;
-}
-
-.woem {
-	animation-duration: 1s;
-	animation-name: slidetoright;
-}
-
-@keyframes slidetoleft {
-	from {
-		margin-left: 100%;
-	}
-
-	to {
-		margin-left: 0%;
-	}
-}
-
-@keyframes slidetoright {
-	from {
-		margin-right: 100%;
-	}
-
-	to {
-		margin-right: 0%;
-	}
 }
